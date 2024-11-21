@@ -1,0 +1,24 @@
+.login-card {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center; /* Centra il titolo */
+
+  .login-form {
+    display: flex;
+    flex-direction: column; /* Impila gli elementi verticalmente */
+    align-items: center; /* Centra il pulsante */
+    gap: 15px; /* Spaziatura tra gli elementi */
+  }
+
+  .full-width {
+    width: 100%; /* I campi di input occupano tutta la larghezza */
+  }
+
+  .login-button {
+    width: 150px; /* Larghezza del pulsante */
+  }
+
+}
+
+
