@@ -1,28 +1,31 @@
 <mat-card class="list-card">
-  <mat-card-title>Todo List</mat-card-title>
+  <mat-card-title>To-Do List</mat-card-title>
   <mat-card-content>
     <!-- Form per aggiungere o modificare un item -->
     <div class="todo-form">
-	  <!-- Campo input -->
-	  <mat-form-field class="full-width" appearance="fill">
-		<mat-label>{{ isEditing ? 'Edit item' : 'Add a new item' }}</mat-label>
-		<input matInput [(ngModel)]="currentTodo" />
-	  </mat-form-field>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>{{ isEditing ? 'Edit description' : 'Add a new description' }}</mat-label>
+        <input matInput [(ngModel)]="currentDescription" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="saveTodo()">
+        {{ isEditing ? 'Save' : 'Add' }}
+      </button>
+    </div>
 
-	  <!-- Pulsante FAB -->
-	  <button mat-fab color="primary" (click)="saveTodo()" aria-label="Save or Add">
-		<mat-icon>{{ isEditing ? 'save' : 'add' }}</mat-icon>
-	  </button>
-	</div>
-
-    <!-- Lista degli elementi -->
+    <!-- Lista degli item -->
     <div class="todo-list">
-      <div class="todo-row" *ngFor="let todo of todos; let i = index" (click)="editTodo(todo, i)">
-        <div class="todo-text">
-          {{ todo.name }}
-        </div>
+      <div
+        class="todo-row"
+        *ngFor="let todo of todos"
+        (click)="editTodo(todo)"
+      >
+        <div class="todo-text">{{ todo.description }}</div>
         <div class="todo-icon">
-          <button mat-icon-button color="warn" (click)="deleteTodo(i); $event.stopPropagation()">
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="deleteTodo(todo.id); $event.stopPropagation()"
+          >
             <mat-icon>delete</mat-icon>
           </button>
         </div>
