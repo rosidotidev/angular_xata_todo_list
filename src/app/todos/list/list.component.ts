@@ -14,7 +14,7 @@ export class ListComponent {
 
   constructor(private xataService: XataService) {}
 
-    ngOnInit(): void {
+  ngOnInit(): void {
     this.loadTodos(); // Carica i to-do all'inizio
   }
 

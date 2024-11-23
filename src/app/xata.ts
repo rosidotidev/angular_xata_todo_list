@@ -16,6 +16,14 @@ const tables = [
       { name: "user", type: "string", notNull: true, defaultValue: "user" },
     ],
   },
+   {
+    name: "prj_todo_user",
+    columns: [
+      { name: "username", type: "text" },
+      { name: "password", type: "text" },
+      { name: "user", type: "string", notNull: true, defaultValue: "user" },
+    ],
+  },
 ] as const;
 
 export type SchemaTables = typeof tables;
@@ -24,8 +32,12 @@ export type InferredTypes = SchemaInference<SchemaTables>;
 export type PrjTodoItem = InferredTypes["prj_todo_item"];
 export type PrjTodoItemRecord = PrjTodoItem & XataRecord;
 
+export type PrjTodoUser = InferredTypes["prj_todo_user"];
+export type PrjTodoUserRecord = PrjTodoUser & XataRecord;
+
 export type DatabaseSchema = {
   prj_todo_item: PrjTodoItemRecord;
+  prj_todo_user: PrjTodoUserRecord;
 };
 
 const DatabaseClient = buildClient();

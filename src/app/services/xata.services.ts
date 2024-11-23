@@ -37,6 +37,15 @@ export class XataService {
   async deleteTodo(id: string) {
     return this.xata.db.prj_todo_item.delete(id);
   }
+  
+  async authenticateUser(username: string, password: string): Promise<boolean> {
+    const users = await this.xata.db.prj_todo_user.filter({
+      username,
+      password, // Considera l'hashing per sicurezza
+    }).getMany();
+
+    return users.length > 0;
+  }
 
   // Genera un ID univoco per nuovi item
   private generateUniqueId(): string {
