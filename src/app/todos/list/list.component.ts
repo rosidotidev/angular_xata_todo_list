@@ -11,6 +11,7 @@ export class ListComponent {
   todos: any[] = []; // Array per i dati
   isEditing: boolean = false; // Flag per la modalità modifica
   editId: string | null = null; // ID del to-do in modifica
+  selectedTodo:any;
 
   constructor(private xataService: XataService) {}
 
@@ -49,6 +50,7 @@ export class ListComponent {
     this.isEditing = true;
     this.currentDescription = todo.description;
     this.editId = todo.id;
+    this.selectedTodo=todo;
   }
 
   // Elimina un to-do dal database
@@ -66,5 +68,6 @@ export class ListComponent {
     this.currentDescription = '';
     this.isEditing = false;
     this.editId = null;
+    this.selectedTodo=null;
   }
 }

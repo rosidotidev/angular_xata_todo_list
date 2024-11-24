@@ -1,7 +1,12 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to Todo List!
-  </h1>
-</div>
+<div class="app-layout">
+  <!-- Intestazione -->
+  <mat-toolbar color="primary" class="app-header">
+    <mat-icon>menu</mat-icon>
+    <span class="app-title">XTodo</span>
+  </mat-toolbar>
 
-<router-outlet></router-outlet>
+  <!-- Contenuto della pagina -->
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

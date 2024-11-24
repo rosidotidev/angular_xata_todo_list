@@ -36,17 +36,41 @@
       border-radius: 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-      .todo-text {
-        flex: 1;
-        text-align: left;
-        font-size: 16px;
-        color: #333;
+      .todo-content {
+        display: flex;
+        flex-direction: column; /* Posiziona descrizione e utente verticalmente */
+      
+        .todo-text {
+          flex: 1;
+          text-align: left;
+          font-size: 16px;
+          color: #333;
+        }
+
+        .todo-user {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: gray;
+          margin-top: 5px; /* Distanza dalla descrizione */
+        }
+        
+        .user-icon {
+          margin-right: 5px;
+          color: #607d8b; /* Colore dell'icona */
+        }
+      
       }
+      
 
       .todo-icon {
         flex-shrink: 0;
         text-align: right;
       }
     }
+    .todo-row.selected {
+      background-color: #cbd6e0; /* Colore di evidenziazione */
+    }
   }
+  
 }
