@@ -6,7 +6,7 @@
 
   .todo-form {
 	  display: flex; /* Disposizione flessibile per allineamento */
-	  align-items: center; /* Allinea verticalmente al centro */
+	  align-items: revert; /* Allinea verticalmente al centro */
 	  gap: 15px; /* Spazio tra input e pulsante */
 
   .full-width {
