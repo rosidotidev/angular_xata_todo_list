@@ -10,6 +10,7 @@ import { getXataClient } from "../xata";
 export class XataService {
 
   xata:any;
+  private currentUser: any = null;
   constructor() {
     // Usa le credenziali da secrets.ts
     this.xata = getXataClient();
@@ -24,13 +25,14 @@ export class XataService {
   async addTodo(description: string) {
     return this.xata.db.prj_todo_item.create({
       id: this.generateUniqueId(),
-      description,
+      description:description,
+      user:this.currentUser.username
     });
   }
 
   // Aggiorna un to-do esistente
   async updateTodo(id: string, description: string) {
-    return this.xata.db.prj_todo_item.update(id, { description });
+    return this.xata.db.prj_todo_item.update(id, { description,user:this.currentUser.username });
   }
 
   // Elimina un to-do
@@ -41,10 +43,17 @@ export class XataService {
   async authenticateUser(username: string, password: string): Promise<boolean> {
     const users = await this.xata.db.prj_todo_user.filter({
       username,
-      password, // Considera l'hashing per sicurezza
-    }).getMany();
+      password, // Consigliato usare hashing per sicurezza
+    })
+    .select(['id', 'username'])
+    .getMany();
 
-    return users.length > 0;
+    if (users.length > 0) {
+      this.currentUser = users[0]; // Conserva il primo utente trovato
+      return true;
+    }
+
+    return false;
   }
 
   // Genera un ID univoco per nuovi item
