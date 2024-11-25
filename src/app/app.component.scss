@@ -34,22 +34,23 @@ nav {
 
 /* Contenitore principale */
 div {
-  padding: 20px;
+  padding: 0px;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 100%;
   text-align: center;
 }
 .spacer {
   flex: 1;
 }
 .content {
-  padding: 20px;
+  padding: 0px;
 }
 .app-layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
   margin: 0; /* Elimina margini predefiniti */
+  padding: 0px;
 }
 
 .app-header {

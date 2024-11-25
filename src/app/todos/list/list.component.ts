@@ -7,67 +7,72 @@ import { XataService } from '../../services/xata.services';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  currentDescription: string = ''; // Campo per il nuovo to-do o per la modifica
-  todos: any[] = []; // Array per i dati
-  isEditing: boolean = false; // Flag per la modalità modifica
-  editId: string | null = null; // ID del to-do in modifica
+  currentDescription: string = ''; // Field for the new to-do or for editing
+  todos: any[] = []; // Array for data
+  isEditing: boolean = false; // Flag for edit mode
+  editId: string | null = null; // ID of the to-do being edited
   selectedTodo:any;
 
   constructor(private xataService: XataService) {}
 
   ngOnInit(): void {
-    this.loadTodos(); // Carica i to-do all'inizio
+    this.loadTodos(); // Load the to-dos at initialization
   }
 
-  // Recupera tutti i to-do dal database Xata
+  // Retrieve all to-dos from the Xata database
   async loadTodos() {
     try {
       this.todos = await this.xataService.getTodos();
     } catch (error) {
-      console.error('Errore nel caricamento dei to-do:', error);
+      console.error('Error loading to-dos:', error);
     }
   }
 
-  // Salva un nuovo to-do o aggiorna uno esistente
+  // Save a new to-do or update an existing one
   async saveTodo() {
     try {
       if (this.isEditing && this.editId) {
-        // Modifica un to-do esistente
+        // Edit an existing to-do
         await this.xataService.updateTodo(this.editId, this.currentDescription);
       } else {
-        // Aggiunge un nuovo to-do
+        // Add a new to-do
         await this.xataService.addTodo(this.currentDescription);
       }
       this.resetForm();
-      await this.loadTodos(); // Ricarica la lista dei to-do
+      await this.loadTodos(); // Reload the to-do list
     } catch (error) {
-      console.error('Errore nel salvataggio del to-do:', error);
+      console.error('Error saving the to-do:', error);
     }
   }
 
-  // Imposta un to-do in modalità modifica
+  // Set a to-do in edit mode
   editTodo(todo: any) {
-    this.isEditing = true;
-    this.currentDescription = todo.description;
-    this.editId = todo.id;
-    this.selectedTodo=todo;
+    if(!this.isEditing || this.editId != todo.id){
+      this.isEditing = true;
+      this.currentDescription = todo.description;
+      this.editId = todo.id;
+      this.selectedTodo = todo;
+    } else {
+      this.resetForm();
+    }
   }
 
-  // Elimina un to-do dal database
+  // Delete a to-do from the database
   async deleteTodo(id: string) {
     try {
+      this.resetForm();
       await this.xataService.deleteTodo(id);
-      await this.loadTodos(); // Ricarica la lista dopo l'eliminazione
+      await this.loadTodos(); // Reload the list after deletion
     } catch (error) {
-      console.error('Errore nella cancellazione del to-do:', error);
+      console.error('Error deleting the to-do:', error);
     }
   }
 
-  // Resetta il form
+  // Reset the form
   resetForm() {
     this.currentDescription = '';
     this.isEditing = false;
     this.editId = null;
-    this.selectedTodo=null;
+    this.selectedTodo = null;
   }
 }
