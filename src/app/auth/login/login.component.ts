@@ -19,10 +19,10 @@ export class LoginComponent {
       // Naviga alla pagina della todo list
       let auth=await this.xataService.authenticateUser(this.username, this.password);
       if(auth){
-		this.router.navigate(['/todos']);
-	  }else{
-		alert('Wrong username or password');
-	  }
+		    this.router.navigate(['/todos']);
+	    }else{
+		    alert('Wrong username or password');
+	    }
     } else {
       alert('Please enter both username and password');
     }

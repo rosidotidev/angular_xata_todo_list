@@ -8,6 +8,7 @@ import { getXataClient } from "../xata";
   providedIn: 'root',
 })
 export class XataService {
+  
 
   xata:any;
   private currentUser: any = null;
@@ -15,6 +16,11 @@ export class XataService {
     // Usa le credenziali da secrets.ts
     this.xata = getXataClient();
   }
+
+  isLoggedIn(): boolean {
+    return this.currentUser!=null;
+  }
+
 
   // Metodo per ottenere tutti i to-do
   async getTodos() {
@@ -55,7 +61,9 @@ export class XataService {
 
     return false;
   }
-
+  async logout(){
+    this.currentUser=null;
+  }
   // Genera un ID univoco per nuovi item
   private generateUniqueId(): string {
     return (
