@@ -1,95 +1,80 @@
-.list-card {
-  max-width: 600px;
-  margin: 0px auto;
-  padding: 0px;
-  background-color: #fff;
+.todo-list {
+  max-height: calc(100vh - 200px); /* Altezza massima relativa alla viewport, meno la form */
+  overflow-y: auto; /* Permette lo scroll verticale */
+  margin-top: 20px; /* Distanza dalla form */
+}
 
-  .todo-form {
-	  display: flex; /* Disposizione flessibile per allineamento */
-	  align-items: revert; /* Allinea verticalmente al centro */
-	  gap: 15px; /* Spazio tra input e pulsante */
+.todo-item {
+  margin-bottom: 15px; /* Spazio tra le card */
+}
 
-    .full-width {
-      flex: 1; /* L'input occupa tutto lo spazio disponibile */
-    }
+.todo-content {
+  display: flex;
+  flex-direction: column; /* Organizza user e description verticalmente */
+}
 
-    button {
-      display: flex; /* Per disporre icona e testo in orizzontale */
-      align-items: center; /* Allinea verticalmente icona e testo */
-      gap: 8px; /* Spazio tra icona e testo */
-      padding: 20px 0px; /* Spaziatura interna */
-      height: 60px; /* Rimuovi altezza fissa */
-      width: 60px; /* Rimuovi larghezza fissa */
-      color: #ffffff
-      
-    }
-    .icon-button {
-      display: flex; /* Per disporre icona e testo in orizzontale */
-      align-items: center; /* Allinea verticalmente icona e testo */
-      gap: 0px; /* Spazio tra icona e testo */
-      padding: 20px 20px; /* Spaziatura interna */
-      height: 60px; /* Rimuovi altezza fissa */
-      width: 60px; /* Rimuovi larghezza fissa */
-      color: #0000aa
-      
-    }
-  .save-icon {
-    flex-shrink: 0;
-    text-align: right;
-  }
+.todo-user {
+  display: flex;
+  align-items: center; /* Allinea l'icona e il testo dell'utente */
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
 
-  }
+.user-icon {
+  margin-right: 8px;
+  color: #007bff; /* Colore dell'icona utente */
+}
 
-  .todo-list {
-    margin-top: 20px;
-
-    .todo-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      margin-bottom: 15px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-      .todo-content {
-        display: flex;
-        flex-direction: column; /* Posiziona descrizione e utente verticalmente */
-      
-        .todo-text {
-          flex: 1;
-          text-align: left;
-          font-size: 16px;
-          color: #333;
-        }
-
-        .todo-user {
-          display: flex;
-          align-items: flex-start;
-          font-size: 12px;
-          color: gray;
-          margin-top: 5px; /* Distanza dalla descrizione */
-          .user-icon {
-            margin-right: 5px;
-            font-size: 14px;
-            color: #7e4679; /* Colore dell'icona */
-          }
-        }
-        
-        
-      
-      }
-      
-
-      .todo-icon {
-        flex-shrink: 0;
-        text-align: right;
-      }
-    }
-    .todo-row.selected {
-      background-color: #cbd6e0; /* Colore di evidenziazione */
-    }
-  }
+.todo-text {
+  flex: 1; /* Occupa tutto lo spazio disponibile a sinistra */
+  text-align: left; /* Allinea il testo a sinistra */
+  font-size: 16px; /* Dimensione del font */
+  color: #333; /* Colore del testo */
   
+  
+}
+.todo-form {
+  display: flex;
+  align-items: flex-start; /* Allinea input e pulsante in alto */
+  gap: 16px; /* Spazio tra input e pulsante */
+  padding: 16px; /* Spaziatura interna */
+  background: #ffffff; /* Sfondo bianco */
+  border-radius: 8px; /* Angoli arrotondati */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+  margin-bottom: 20px; /* Spazio sotto la form */
+}
+
+mat-card-content {
+  padding-top: 1px; /* Imposta un padding di 1 pixel su tutti i lati */
+  .mat-mdc-card-content:last-child {
+    padding-bottom: 1px;
+  }
+}
+
+.full-width {
+  flex: 1; /* L'input occupa tutto lo spazio disponibile */
+}
+
+button {
+  flex-shrink: 0; /* Impedisce al pulsante di ridimensionarsi */
+  height: 56px; /* Altezza del pulsante */
+}
+
+.todo-row {
+  display: flex; /* Attiva Flexbox */
+  justify-content: space-between; /* Sposta gli elementi ai lati opposti */
+  align-items: center; /* Allinea verticalmente al centro */
+  padding: 8px; /* Spaziatura interna per rendere il layout più gradevole */
+  
+}
+.todo-item.selected {
+  background-color: #e0e0e9; /* Colore di sfondo */
+}
+.todo-content {
+  display: flex;
+  flex-direction: column; /* Organizza utente e descrizione in verticale */
+  flex: 1; /* Occupa tutto lo spazio disponibile nella colonna sinistra */
+  gap: 4px; /* Spaziatura tra utente e descrizione */
+  border-right: 1px solid #e0e0e0;
 }
