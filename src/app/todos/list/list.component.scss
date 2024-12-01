@@ -45,6 +45,14 @@
   border-bottom: 2px solid #020531;
 }
 
+.mybutton-icon {
+  font-size: 28px;
+  height: 24px;
+  width: 24px;
+  color: #f9f9f9;
+  
+}
+
 .todo-text {
   flex: 1; /* Occupa tutto lo spazio disponibile a sinistra */
   text-align: left; /* Allinea il testo a sinistra */
@@ -84,6 +92,13 @@ mat-card-content.mat-mdc-card-content {
 button {
   flex-shrink: 0; /* Impedisce al pulsante di ridimensionarsi */
   height: 56px; /* Altezza del pulsante */
+}
+
+.mymaterial-button {
+  flex-shrink: 0; /* Impedisce al pulsante di ridimensionarsi */
+  height: 56px; /* Altezza del pulsante */
+  background-color: #0611a0;
+  border-radius: 30%;
 }
 
 .todo-row {

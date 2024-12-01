@@ -48,16 +48,20 @@ export class ListComponent {
 
   // Save a new to-do or update an existing one
   async saveTodo() {
+    const empty=!this.currentDescription || this.currentDescription.trim().length === 0
     try {
-      if (this.isEditing && this.editId) {
-        // Edit an existing to-do
-        await this.xataService.updateTodo(this.editId, this.currentDescription);
-      } else {
-        // Add a new to-do
-        await this.xataService.addTodo(this.currentDescription);
+      if(!empty){
+        if (this.isEditing && this.editId) {
+          // Edit an existing to-do
+          await this.xataService.updateTodo(this.editId, this.currentDescription);
+        } else {
+          // Add a new to-do
+          await this.xataService.addTodo(this.currentDescription);
+        }
+        this.resetForm();
+        await this.loadTodos(); // Reload the to-do list
       }
-      this.resetForm();
-      await this.loadTodos(); // Reload the to-do list
+
     } catch (error) {
       console.error('Error saving the to-do:', error);
     }

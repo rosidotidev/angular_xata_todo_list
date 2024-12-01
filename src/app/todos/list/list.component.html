@@ -4,8 +4,8 @@
       <mat-label>{{ isEditing ? 'Edit item' : 'Add item' }}</mat-label>
       <input matInput [(ngModel)]="currentDescription" />
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="saveTodo()">
-      {{ isEditing ? 'Save' : 'Add' }}
+    <button mat-button class ="mymaterial-button" (click)="saveTodo()">
+      <mat-icon class="mybutton-icon">{{ isEditing ? 'save' : 'add' }}</mat-icon>
     </button>
   </div>
   <div class="todo-filter">
