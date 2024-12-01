@@ -23,8 +23,13 @@ export class XataService {
 
 
   // Metodo per ottenere tutti i to-do
-  async getTodos() {
-    return this.xata.db.prj_todo_item.getMany();
+  async getTodos(filter:string) {
+    if(filter=='all')
+      return this.xata.db.prj_todo_item.sort('status','asc').getMany();
+    else{
+      let status=filter=='open'?0:1;
+      return this.xata.db.prj_todo_item.filter('status',status).sort('status','asc').getMany();
+    }
   }
 
   // Aggiunge un nuovo to-do

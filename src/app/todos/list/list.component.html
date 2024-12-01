@@ -1,12 +1,29 @@
-<div class="todo-form">
-  <mat-form-field class="full-width" appearance="outline">
-    <mat-label>{{ isEditing ? 'Edit description' : 'Add a new description' }}</mat-label>
-    <input matInput [(ngModel)]="currentDescription" />
-  </mat-form-field>
-  <button mat-raised-button color="primary" (click)="saveTodo()">
-    {{ isEditing ? 'Save' : 'Add' }}
-  </button>
+<div class="todo-cockpit">
+  <div class="todo-form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>{{ isEditing ? 'Edit description' : 'Add a new description' }}</mat-label>
+      <input matInput [(ngModel)]="currentDescription" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="saveTodo()">
+      {{ isEditing ? 'Save' : 'Add' }}
+    </button>
+  </div>
+  <div class="todo-filter">
+    <button mat-icon-button color="primary" (click)="filterTodos('all')">
+      <mat-icon>text_snippet</mat-icon>
+      
+    </button>
+    <button mat-icon-button color="accent" (click)="filterTodos('open')">
+      <mat-icon>check_box_outline_blank</mat-icon>
+      
+    </button>
+    <button mat-icon-button color="warn" (click)="filterTodos('selected')">
+      <mat-icon>check_box</mat-icon>
+      
+    </button>
+  </div>
 </div>
+
 
 <!-- Lista degli item -->
 <div class="todo-list">
@@ -41,4 +58,8 @@
     </mat-card-content>
   </mat-card>
   
+  
 </div>
+
+
+

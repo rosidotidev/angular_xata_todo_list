@@ -4,6 +4,8 @@
   margin-top: 20px; /* Distanza dalla form */
 }
 
+
+
 .todo-item {
   margin-bottom: 15px; /* Spazio tra le card */
   border-radius: 12px;
@@ -42,15 +44,20 @@
   
   
 }
+.todo-cockpit {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+  margin-bottom: 20px; /* Spazio sotto la form */
+  flex-shrink: 0;
+  flex:0;
+}
 .todo-form {
   display: flex;
   align-items: flex-start; /* Allinea input e pulsante in alto */
   gap: 16px; /* Spazio tra input e pulsante */
-  padding: 16px; /* Spaziatura interna */
+  padding: 16px 16px 1px 16px; /* Spaziatura interna */
   background: #ffffff; /* Sfondo bianco */
-  border-radius: 8px; /* Angoli arrotondati */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
-  margin-bottom: 20px; /* Spazio sotto la form */
 }
 
 mat-card-content.mat-mdc-card-content {
@@ -85,4 +92,23 @@ button {
   flex: 1; /* Occupa tutto lo spazio disponibile nella colonna sinistra */
   gap: 4px; /* Spaziatura tra utente e descrizione */
   border-right: 1px solid #e0e0e0;
+}
+
+.todo-filter {
+  display: flex; /* Allinea i pulsanti in orizzontale */
+  justify-content: space-around; /* Distribuisce i pulsanti equamente */
+  align-items: center; /* Allinea verticalmente */
+  padding: 1px 1px; /* Spaziatura interna */
+  border-top: 1px solid #e0e0e0; /* Linea di separazione sopra il footer */
+  background-color: hsl(313, 20%, 91%); /* Colore di sfondo del footer */
+ }
+
+.todo-footer button {
+  display: flex;
+  flex-direction: column; /* Dispone icona e testo verticalmente */
+  align-items: center; /* Centra gli elementi */
+}
+
+.todo-footer mat-icon {
+  font-size: 24px; /* Dimensione dell'icona */
 }

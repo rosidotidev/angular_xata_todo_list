@@ -12,6 +12,7 @@ export class ListComponent {
   isEditing: boolean = false; // Flag for edit mode
   editId: string | null = null; // ID of the to-do being edited
   selectedTodo:any;
+  currentFilter: string='all'; 
 
   constructor(private xataService: XataService) {}
 
@@ -22,11 +23,22 @@ export class ListComponent {
   // Retrieve all to-dos from the Xata database
   async loadTodos() {
     try {
-      this.todos = await this.xataService.getTodos();
+      this.todos = await this.xataService.getTodos(this.currentFilter);
     } catch (error) {
       console.error('Error loading to-dos:', error);
     }
   }
+
+  async filterTodos(status:string) {
+    try {
+      this.currentFilter=status;
+      this.todos = await this.xataService.getTodos(this.currentFilter);
+    } catch (error) {
+      console.error('Error loading to-dos:', error);
+    }
+  }
+
+  
 
   // Save a new to-do or update an existing one
   async saveTodo() {
