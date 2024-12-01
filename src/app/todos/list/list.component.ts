@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { XataService } from '../../services/xata.services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -14,10 +15,15 @@ export class ListComponent {
   selectedTodo:any;
   currentFilter: string='all'; 
 
-  constructor(private xataService: XataService) {}
+  constructor(private router: Router,private xataService: XataService) {}
 
   ngOnInit(): void {
-    this.loadTodos(); // Load the to-dos at initialization
+    const loggedIn=this.xataService.isLoggedIn();
+    if(!loggedIn){
+      this.router.navigate(['/']);
+    }else{
+      this.loadTodos(); // Load the to-dos at initialization
+    }
   }
 
   // Retrieve all to-dos from the Xata database
