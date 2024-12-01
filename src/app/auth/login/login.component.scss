@@ -1,24 +1,58 @@
 .login-card {
   max-width: 400px;
-  margin: 50px auto;
-  padding: 1px;
-  text-align: center; /* Centra il titolo */
+  margin: 50px auto; /* Centra la card */
+  
+  text-align: center; /* Centra il testo del titolo */
+  border-radius: 12px; /* Arrotonda gli angoli */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra marcata */
+  background-color: #ffffff; /* Sfondo bianco per contrasto */
+}
 
   .login-form {
     display: flex;
     flex-direction: column; /* Impila gli elementi verticalmente */
     align-items: center; /* Centra il pulsante */
-    gap: 15px; /* Spaziatura tra gli elementi */
+    gap: 1px; /* Spaziatura tra gli elementi */
   }
+
+mat-form-field {
+  background-color: #ffffff; /* Sfondo bianco, uguale alla card */
+  border-radius: 4px; /* Arrotonda i bordi degli input */
+  margin: 0; /* Rimuove i margini aggiuntivi */
+}
+
+input {
+  padding: 0; /* Rimuove padding interni */
+}
+
 
   .full-width {
     width: 100%; /* I campi di input occupano tutta la larghezza */
   }
 
   .login-button {
-    width: 150px; /* Larghezza del pulsante */
+    width: auto; /* Adatta la larghezza al contenuto */
+    display: flex; /* Disposizione flessibile per allineare icona e testo */
+    align-items: center; /* Allinea icona e testo verticalmente */
+    justify-content: center; /* Centra l'intero contenuto */
+    gap: 8px; /* Spazio tra icona e testo */
+    padding: 8px 16px; /* Aggiungi spaziatura interna */
+    font-size: 16px; /* Dimensione del testo */
+  
+    &:hover {
+      background-color: #005bb5; /* Cambia colore al passaggio del mouse */
+    }
+  
+    &:active {
+      background-color: #003f7f; /* Colore più scuro quando cliccato */
+    }
+  
+    &:focus {
+      outline: 2px solid #82b1ff; /* Aggiungi un bordo per il focus */
+      outline-offset: 2px;
+    }
   }
+  
 
-}
 
 

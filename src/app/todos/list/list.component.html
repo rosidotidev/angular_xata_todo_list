@@ -26,9 +26,15 @@
       <!-- Seconda colonna: Pulsante con icona -->
       <button
         mat-icon-button
+        color="primary"
+        (click)="updateTodoStatus(todo); $event.stopPropagation()">
+        <mat-icon class="mymaterial-icons"> {{ todo.status==0 ? 'check_box_outline_blank' : 'check_box' }}</mat-icon>
+      </button>
+      <button
+        mat-icon-button
         color="warn"
         (click)="deleteTodo(todo.id); $event.stopPropagation()">
-        <mat-icon>delete</mat-icon>
+        <mat-icon class="mymaterial-icons">delete</mat-icon>
       </button>
     </div>
     

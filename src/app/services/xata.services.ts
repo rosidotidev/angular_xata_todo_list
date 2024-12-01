@@ -41,6 +41,11 @@ export class XataService {
     return this.xata.db.prj_todo_item.update(id, { description,user:this.currentUser.username });
   }
 
+  // Aggiorna un to-do esistente
+  async updateTodoStatus(id: string, status: number) {
+    return this.xata.db.prj_todo_item.update(id, { status:status });
+  }
+
   // Elimina un to-do
   async deleteTodo(id: string) {
     return this.xata.db.prj_todo_item.delete(id);
