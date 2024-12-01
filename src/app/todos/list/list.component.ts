@@ -68,6 +68,19 @@ export class ListComponent {
     }
   }
 
+  async updateTodoStatus(todo: any) {
+    try {
+      this.resetForm();
+      let status=1
+      if(todo.status==1)
+        status=0
+      await this.xataService.updateTodoStatus(todo.id,status);
+      await this.loadTodos(); // Reload the list after deletion
+    } catch (error) {
+      console.error('Error deleting the to-do:', error);
+    }
+  }
+
   // Reset the form
   resetForm() {
     this.currentDescription = '';

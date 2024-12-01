@@ -6,6 +6,7 @@
 
 .todo-item {
   margin-bottom: 15px; /* Spazio tra le card */
+  border-radius: 12px;
 }
 
 .todo-content {
@@ -24,6 +25,13 @@
 .user-icon {
   margin-right: 8px;
   color: #007bff; /* Colore dell'icona utente */
+}
+
+.mymaterial-icons {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  
 }
 
 .todo-text {
@@ -45,11 +53,11 @@
   margin-bottom: 20px; /* Spazio sotto la form */
 }
 
-mat-card-content {
-  padding-top: 1px; /* Imposta un padding di 1 pixel su tutti i lati */
-  .mat-mdc-card-content:last-child {
+mat-card-content.mat-mdc-card-content {
     padding-bottom: 1px;
-  }
+    padding-top: 1px;
+    padding-right: 1px;
+  
 }
 
 .full-width {
