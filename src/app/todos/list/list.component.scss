@@ -33,7 +33,16 @@
   font-size: 24px;
   height: 24px;
   width: 24px;
+  color: #5a5094;
   
+}
+
+.mymaterial-icons.selected {
+  font-size: 28px;
+  height: 28px;
+  width: 28px;
+  color:  #007bff;
+  border-bottom: 2px solid #020531;
 }
 
 .todo-text {
@@ -64,6 +73,7 @@ mat-card-content.mat-mdc-card-content {
     padding-bottom: 1px;
     padding-top: 1px;
     padding-right: 1px;
+    
   
 }
 
