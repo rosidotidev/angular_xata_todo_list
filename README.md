@@ -102,7 +102,7 @@ src/
 
 ## **Screenshots**
 ### **Login Page**
-<img src="[images/img1.png](https://raw.githubusercontent.com/rosidotidev/angular_xata_todo_list/refs/heads/main/login.jpeg)" width="400" height="600">
+<img src="https://raw.githubusercontent.com/rosidotidev/angular_xata_todo_list/refs/heads/main/login.jpeg" width="400" height="600">
 
 ### **Todo List**
 ![Todo List](https://via.placeholder.com/800x400?text=Todo+List)
