@@ -31,7 +31,7 @@ This project is a **Todo List Application** built with **Angular 18**, styled us
 ### **Setup**
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<your-username>/angular-xata-todo-list.git
+   git clone https://github.com/rosidotidev/angular-xata-todo-list.git
    cd angular-xata-todo-list
    ```
 
@@ -73,8 +73,7 @@ src/
 │   ├── auth/             # Login module
 │   ├── todos/            # Todo list module
 │   ├── services/         # Xata integration services
-│   ├── app.component.*   # Root component
-├── assets/               # Static assets
+│   └── app.component.*   # Root component
 ├── environments/         # Environment-specific configurations
 ├── index.html            # Main HTML file
 └── main.ts               # Application entry point
@@ -137,4 +136,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ## **Contact**
 For questions or support, please reach out to:
 - **Author**: [Your Name](mailto:your-email@example.com)
-- **GitHub**: [Your GitHub Profile](https://github.com/your-username)
+- **GitHub**: [Your GitHub Profile](https://github.com/rosidotidev)
