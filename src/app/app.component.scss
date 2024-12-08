@@ -62,7 +62,8 @@ div {
 .app-content {
   flex: 1; /* Espande il contenuto per occupare lo spazio disponibile */
   padding: 1px;
-  overflow: auto; /* Aggiunge uno scroll per contenuti lunghi */
+  width: 100%;
+  //overflow: auto; /* Aggiunge uno scroll per contenuti lunghi */
   background-color: #f5f5f5; /* Colore di sfondo per differenziare l'area di contenuto */
 }
 

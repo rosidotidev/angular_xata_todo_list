@@ -2,9 +2,10 @@
   max-height: calc(100vh - 200px); /* Altezza massima relativa alla viewport, meno la form */
   overflow-y: auto; /* Permette lo scroll verticale */
   margin-top: 20px; /* Distanza dalla form */
+  width:calc(100% - 20px);
+  margin-left:10px;
+  margin-right:10px;
 }
-
-
 
 .todo-item {
   margin-bottom: 15px; /* Spazio tra le card */
@@ -97,8 +98,20 @@ button {
 .mymaterial-button {
   flex-shrink: 0; /* Impedisce al pulsante di ridimensionarsi */
   height: 56px; /* Altezza del pulsante */
-  background-color: #0611a0;
+  background-color: #003f7f;
   border-radius: 30%;
+  &:hover {
+    background-color: #005bb5; /* Cambia colore al passaggio del mouse */
+  }
+
+  &:active {
+    background-color: #003f7f; /* Colore più scuro quando cliccato */
+  }
+
+  &:focus {
+    outline: 2px solid #82b1ff; /* Aggiungi un bordo per il focus */
+    outline-offset: 2px;
+  }
 }
 
 .todo-row {
