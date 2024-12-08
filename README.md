@@ -134,5 +134,5 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## **Contact**
 For questions or support, please reach out to:
-- **Author**: [Your Name](mailto:your-email@example.com)
-- **GitHub**: [Your GitHub Profile](https://github.com/rosidotidev)
+- **Author**: [rosidoti](mailto:rosidotidev@gmail.com)
+
