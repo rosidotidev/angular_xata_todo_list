@@ -2,23 +2,23 @@
   <mat-card-title>Login</mat-card-title>
   <mat-card-content>
     <form (ngSubmit)="onLogin()" class="login-form">
-      <!-- Campo Username -->
+      <!-- Username Field -->
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Username</mat-label>
         <input matInput type="text" [(ngModel)]="username" name="username" required />
       </mat-form-field>
 
-      <!-- Campo Password -->
+      <!-- Password Field -->
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Password</mat-label>
         <input matInput type="password" [(ngModel)]="password" name="password" required />
       </mat-form-field>
 
-      <!-- Pulsante Login -->
-     <button mat-raised-button color="primary" type="submit" class="login-button">
-  <mat-icon>login</mat-icon>
-  Login
-</button>
+      <!-- Login Button -->
+      <button mat-raised-button color="primary" type="submit" class="login-button">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
 
     </form>
   </mat-card-content>

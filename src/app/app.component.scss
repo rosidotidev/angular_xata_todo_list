@@ -1,11 +1,11 @@
-/* Stile per il messaggio di benvenuto */
+/* Style for the welcome message */
 h1 {
   font-family: Arial, sans-serif;
-  color: #3f51b5; /* Colore del tema Material Indigo */
+  color: #3f51b5; /* Material theme Indigo color */
   text-align: center;
 }
 
-/* Stile per la barra di navigazione */
+/* Style for the navigation bar */
 nav {
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ nav {
     transition: color 0.3s;
 
     &:hover {
-      color: #ff4081; /* Colore del tema Material Pink */
+      color: #ff4081; /* Material theme Pink color */
     }
 
     &.active {
@@ -32,39 +32,40 @@ nav {
   }
 }
 
-/* Contenitore principale */
+/* Main container */
 div {
   padding: 0px;
   margin: 0 auto;
   max-width: 100%;
   text-align: center;
 }
+
 .spacer {
   flex: 1;
 }
+
 .content {
   padding: 0px;
 }
+
 .app-layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0; /* Elimina margini predefiniti */
+  margin: 0; /* Removes default margins */
   padding: 0px;
 }
 
 .app-header {
   display: flex;
-  height: 64px; /* Altezza toolbar */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombra */
+  height: 64px; /* Toolbar height */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
 }
 
 .app-content {
-  flex: 1; /* Espande il contenuto per occupare lo spazio disponibile */
+  flex: 1; /* Expands content to fill available space */
   padding: 1px;
   width: 100%;
-  //overflow: auto; /* Aggiunge uno scroll per contenuti lunghi */
-  background-color: #f5f5f5; /* Colore di sfondo per differenziare l'area di contenuto */
+  //overflow: auto; /* Adds scroll for long content */
+  background-color: #f5f5f5; /* Background color to differentiate the content area */
 }
-
-

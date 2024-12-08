@@ -1,25 +1,25 @@
 .todo-list {
-  max-height: calc(100vh - 200px); /* Altezza massima relativa alla viewport, meno la form */
-  overflow-y: auto; /* Permette lo scroll verticale */
-  margin-top: 20px; /* Distanza dalla form */
-  width:calc(100% - 20px);
-  margin-left:10px;
-  margin-right:10px;
+  max-height: calc(100vh - 200px); /* Maximum height relative to the viewport, minus the form */
+  overflow-y: auto; /* Enables vertical scrolling */
+  margin-top: 20px; /* Distance from the form */
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .todo-item {
-  margin-bottom: 15px; /* Spazio tra le card */
+  margin-bottom: 15px; /* Space between cards */
   border-radius: 12px;
 }
 
 .todo-content {
   display: flex;
-  flex-direction: column; /* Organizza user e description verticalmente */
+  flex-direction: column; /* Organizes user and description vertically */
 }
 
 .todo-user {
   display: flex;
-  align-items: center; /* Allinea l'icona e il testo dell'utente */
+  align-items: center; /* Aligns the icon and user text */
   font-size: 14px;
   color: #555;
   margin-bottom: 8px;
@@ -27,7 +27,7 @@
 
 .user-icon {
   margin-right: 8px;
-  color: #007bff; /* Colore dell'icona utente */
+  color: #007bff; /* User icon color */
 }
 
 .mymaterial-icons {
@@ -35,14 +35,13 @@
   height: 24px;
   width: 24px;
   color: #5a5094;
-  
 }
 
 .mymaterial-icons.selected {
   font-size: 28px;
   height: 28px;
   width: 28px;
-  color:  #007bff;
+  color: #007bff;
   border-bottom: 2px solid #020531;
 }
 
@@ -51,102 +50,100 @@
   height: 24px;
   width: 24px;
   color: #f9f9f9;
-  
 }
 
 .todo-text {
-  flex: 1; /* Occupa tutto lo spazio disponibile a sinistra */
-  text-align: left; /* Allinea il testo a sinistra */
-  font-size: 16px; /* Dimensione del font */
-  color: #333; /* Colore del testo */
-  
-  
+  flex: 1; /* Takes up all available space on the left */
+  text-align: left; /* Aligns the text to the left */
+  font-size: 16px; /* Font size */
+  color: #333; /* Text color */
 }
+
 .todo-cockpit {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
-  margin-bottom: 20px; /* Spazio sotto la form */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Space below the form */
   flex-shrink: 0;
-  flex:0;
+  flex: 0;
 }
+
 .todo-form {
   display: flex;
-  align-items: flex-start; /* Allinea input e pulsante in alto */
-  gap: 16px; /* Spazio tra input e pulsante */
-  padding: 16px 16px 1px 16px; /* Spaziatura interna */
-  background: #ffffff; /* Sfondo bianco */
+  align-items: flex-start; /* Aligns input and button at the top */
+  gap: 16px; /* Space between input and button */
+  padding: 16px 16px 1px 16px; /* Internal padding */
+  background: #ffffff; /* White background */
 }
 
 mat-card-content.mat-mdc-card-content {
-    padding-bottom: 1px;
-    padding-top: 1px;
-    padding-right: 1px;
-    
-  
+  padding-bottom: 1px;
+  padding-top: 1px;
+  padding-right: 1px;
 }
 
 .full-width {
-  flex: 1; /* L'input occupa tutto lo spazio disponibile */
+  flex: 1; /* Input takes up all available space */
 }
 
 button {
-  flex-shrink: 0; /* Impedisce al pulsante di ridimensionarsi */
-  height: 56px; /* Altezza del pulsante */
+  flex-shrink: 0; /* Prevents the button from resizing */
+  height: 56px; /* Button height */
 }
 
 .mymaterial-button {
-  flex-shrink: 0; /* Impedisce al pulsante di ridimensionarsi */
-  height: 56px; /* Altezza del pulsante */
+  flex-shrink: 0; /* Prevents the button from resizing */
+  height: 56px; /* Button height */
   background-color: #003f7f;
   border-radius: 30%;
   &:hover {
-    background-color: #005bb5; /* Cambia colore al passaggio del mouse */
+    background-color: #005bb5; /* Changes color on hover */
   }
 
   &:active {
-    background-color: #003f7f; /* Colore più scuro quando cliccato */
+    background-color: #003f7f; /* Darker color when clicked */
   }
 
   &:focus {
-    outline: 2px solid #82b1ff; /* Aggiungi un bordo per il focus */
+    outline: 2px solid #82b1ff; /* Adds a border on focus */
     outline-offset: 2px;
   }
 }
 
 .todo-row {
-  display: flex; /* Attiva Flexbox */
-  justify-content: space-between; /* Sposta gli elementi ai lati opposti */
-  align-items: center; /* Allinea verticalmente al centro */
-  padding: 8px; /* Spaziatura interna per rendere il layout più gradevole */
-  
+  display: flex; /* Enables Flexbox */
+  justify-content: space-between; /* Moves items to opposite sides */
+  align-items: center; /* Aligns vertically at the center */
+  padding: 8px; /* Internal padding for a better layout */
 }
+
 .todo-item.selected {
-  background-color: #e0e0e9; /* Colore di sfondo */
+  background-color: #e0e0e9; /* Background color */
 }
+
 .todo-content {
   display: flex;
-  flex-direction: column; /* Organizza utente e descrizione in verticale */
-  flex: 1; /* Occupa tutto lo spazio disponibile nella colonna sinistra */
-  gap: 4px; /* Spaziatura tra utente e descrizione */
+  flex-direction: column; /* Organizes user and description vertically */
+  flex: 1; /* Takes up all available space in the left column */
+  gap: 4px; /* Space between user and description */
   border-right: 1px solid #e0e0e0;
 }
 
 .todo-filter {
-  display: flex; /* Allinea i pulsanti in orizzontale */
-  justify-content: space-around; /* Distribuisce i pulsanti equamente */
-  align-items: center; /* Allinea verticalmente */
-  padding: 1px 1px; /* Spaziatura interna */
-  border-top: 1px solid #e0e0e0; /* Linea di separazione sopra il footer */
-  background-color: hsl(313, 20%, 91%); /* Colore di sfondo del footer */
- }
+  display: flex; /* Aligns buttons horizontally */
+  justify-content: space-around; /* Distributes buttons evenly */
+  align-items: center; /* Aligns vertically */
+  padding: 1px 1px; /* Internal padding */
+  border-top: 1px solid #e0e0e0; /* Separation line above the footer */
+  background-color: hsl(313, 20%, 91%); /* Footer background color */
+}
 
 .todo-footer button {
   display: flex;
-  flex-direction: column; /* Dispone icona e testo verticalmente */
-  align-items: center; /* Centra gli elementi */
+  flex-direction: column; /* Arranges icon and text vertically */
+  align-items: center; /* Centers the elements */
 }
 
 .todo-footer mat-icon {
-  font-size: 24px; /* Dimensione dell'icona */
+  font-size: 24px; /* Icon size */
 }

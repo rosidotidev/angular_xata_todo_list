@@ -18,10 +18,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ListComponent } from './todos/list/list.component';
 
-// Configura le rotte dell'applicazione
+// Configure application routes
 const appRoutes: Routes = [
-  { path: '', component: LoginComponent }, // La home è il login
-  { path: 'todos', component: ListComponent } // Naviga alla todo list dopo il login
+  { path: '', component: LoginComponent }, // The home is the login
+  { path: 'todos', component: ListComponent } // Navigate to the todo list after login
 ];
 
 @NgModule({
@@ -32,7 +32,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule, // Necessario per Angular Material
+    BrowserAnimationsModule, // Required for Angular Material
     FormsModule,
     MatInputModule,
     MatButtonModule,
@@ -42,7 +42,7 @@ const appRoutes: Routes = [
     MatToolbar,
     HttpClientModule,
     MatSnackBarModule,
-    RouterModule.forRoot(appRoutes) // Importa e configura RouterModule
+    RouterModule.forRoot(appRoutes) // Import and configure RouterModule
   ],
   providers: [ { provide: LocationStrategy, useClass: HashLocationStrategy },],
   bootstrap: [AppComponent]

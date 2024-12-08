@@ -4,34 +4,30 @@
       <mat-label>{{ isEditing ? 'Edit item' : 'Add item' }}</mat-label>
       <input matInput [(ngModel)]="currentDescription" />
     </mat-form-field>
-    <button mat-button class ="mymaterial-button" (click)="saveTodo()">
+    <button mat-button class="mymaterial-button" (click)="saveTodo()">
       <mat-icon class="mybutton-icon">{{ isEditing ? 'save' : 'add' }}</mat-icon>
     </button>
   </div>
   <div class="todo-filter">
     <button mat-icon-button color="primary" (click)="filterTodos('all')">
       <mat-icon class="mymaterial-icons" [ngClass]="{ 'selected': currentFilter == 'all' }">text_snippet</mat-icon>
-      
     </button>
     <button mat-icon-button color="accent" (click)="filterTodos('open')">
       <mat-icon class="mymaterial-icons" [ngClass]="{ 'selected': currentFilter == 'open' }">check_box_outline_blank</mat-icon>
-      
     </button>
     <button mat-icon-button color="warn" (click)="filterTodos('selected')">
       <mat-icon class="mymaterial-icons" [ngClass]="{ 'selected': currentFilter == 'selected' }">check_box</mat-icon>
-      
     </button>
   </div>
 </div>
 
-
-<!-- Lista degli item -->
+<!-- List of items -->
 <div class="todo-list">
   <mat-card *ngFor="let todo of todos" class="todo-item" (click)="editTodo(todo)" [ngClass]="{ 'selected': selectedTodo?.id === todo.id }">
     <mat-card-content>
-    <!-- Descrizione e Pulsante (Stessa Riga) -->
+    <!-- Description and Button (Same Row) -->
     <div class="todo-row">
-      <!-- Prima colonna: Utente e Testo -->
+      <!-- First column: User and Text -->
       <div class="todo-content">
         <div class="todo-user">
           <mat-icon class="user-icon">account_circle</mat-icon>
@@ -40,7 +36,7 @@
         <div class="todo-text">{{ todo.description }}</div>
       </div>
     
-      <!-- Seconda colonna: Pulsante con icona -->
+      <!-- Second column: Button with icon -->
       <button
         mat-icon-button
         color="primary"
@@ -54,12 +50,6 @@
         <mat-icon>delete</mat-icon>
       </button>
     </div>
-    
     </mat-card-content>
   </mat-card>
-  
-  
 </div>
-
-
-

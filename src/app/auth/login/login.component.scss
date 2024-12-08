@@ -1,58 +1,53 @@
 .login-card {
   max-width: 400px;
-  margin: 50px auto; /* Centra la card */
+  margin: 50px auto; /* Centers the card */
   
-  text-align: center; /* Centra il testo del titolo */
-  border-radius: 12px; /* Arrotonda gli angoli */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra marcata */
-  background-color: #ffffff; /* Sfondo bianco per contrasto */
+  text-align: center; /* Centers the title text */
+  border-radius: 12px; /* Rounds the corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Adds a prominent shadow */
+  background-color: #ffffff; /* White background for contrast */
 }
 
-  .login-form {
-    display: flex;
-    flex-direction: column; /* Impila gli elementi verticalmente */
-    align-items: center; /* Centra il pulsante */
-    gap: 1px; /* Spaziatura tra gli elementi */
-  }
+.login-form {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center; /* Centers the button */
+  gap: 1px; /* Spacing between elements */
+}
 
 mat-form-field {
-  background-color: #ffffff; /* Sfondo bianco, uguale alla card */
-  border-radius: 4px; /* Arrotonda i bordi degli input */
-  margin: 0; /* Rimuove i margini aggiuntivi */
+  background-color: #ffffff; /* White background, same as the card */
+  border-radius: 4px; /* Rounds the edges of the input fields */
+  margin: 0; /* Removes additional margins */
 }
 
 input {
-  padding: 0; /* Rimuove padding interni */
+  padding: 0; /* Removes internal padding */
 }
 
+.full-width {
+  width: 100%; /* Input fields take up the full width */
+}
 
-  .full-width {
-    width: 100%; /* I campi di input occupano tutta la larghezza */
+.login-button {
+  width: auto; /* Adapts width to content */
+  display: flex; /* Flexible layout to align icon and text */
+  align-items: center; /* Vertically aligns icon and text */
+  justify-content: center; /* Centers the entire content */
+  gap: 8px; /* Space between icon and text */
+  padding: 8px 16px; /* Adds internal spacing */
+  font-size: 16px; /* Text size */
+
+  &:hover {
+    background-color: #005bb5; /* Changes color on hover */
   }
 
-  .login-button {
-    width: auto; /* Adatta la larghezza al contenuto */
-    display: flex; /* Disposizione flessibile per allineare icona e testo */
-    align-items: center; /* Allinea icona e testo verticalmente */
-    justify-content: center; /* Centra l'intero contenuto */
-    gap: 8px; /* Spazio tra icona e testo */
-    padding: 8px 16px; /* Aggiungi spaziatura interna */
-    font-size: 16px; /* Dimensione del testo */
-  
-    &:hover {
-      background-color: #005bb5; /* Cambia colore al passaggio del mouse */
-    }
-  
-    &:active {
-      background-color: #003f7f; /* Colore più scuro quando cliccato */
-    }
-  
-    &:focus {
-      outline: 2px solid #82b1ff; /* Aggiungi un bordo per il focus */
-      outline-offset: 2px;
-    }
+  &:active {
+    background-color: #003f7f; /* Darker color when clicked */
   }
-  
 
-
-
+  &:focus {
+    outline: 2px solid #82b1ff; /* Adds a border for focus */
+    outline-offset: 2px;
+  }
+}
