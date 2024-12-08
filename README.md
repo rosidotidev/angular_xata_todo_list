@@ -102,7 +102,7 @@ src/
 
 ## **Screenshots**
 ### **Login Page**
-![Login Page](https://via.placeholder.com/800x400?text=Login+Page)
+![Login Page](https://raw.githubusercontent.com/rosidotidev/angular_xata_todo_list/refs/heads/main/login.jpeg)
 
 ### **Todo List**
 ![Todo List](https://via.placeholder.com/800x400?text=Todo+List)
