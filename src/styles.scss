@@ -88,48 +88,7 @@ footer {
   text-align: center;
 }
 
-/* LoginComponent */
-.login-card {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: $spacing-unit * 2;
-  background-color: #fff;
-  @include box-shadow(1);
 
-  button {
-    margin-top: $spacing-unit;
-  }
-}
-
-/* ListComponent */
-.list-card {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: $spacing-unit * 2;
-  background-color: #fff;
-  @include box-shadow(2);
-
-  .todo-form {
-    display: flex;
-    align-items: center;
-    gap: $spacing-unit;
-
-    input {
-      flex: 1;
-    }
-  }
-
-  .todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $spacing-unit;
-
-    &:hover {
-      background-color: $background-color;
-    }
-  }
-}
 .snackbar-error {
   background-color: #FF0000; /* Rosso per errori */
   color: white;
